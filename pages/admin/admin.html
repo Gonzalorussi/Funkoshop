@@ -4,77 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
     <header> <!--Inicio Header -->
-        <nav>        
-            <picture>
+        <nav class="navbar container">        
+            <picture class="navbar__logo">
                 <a href="../../index.html">
                  <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
                 </a>
             </picture>
         
-            <ul>
-                <li>
-                    <a href="../Shop/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../Shop/shop.html">VER TIENDA</a>
                 </li>
-                <li>
-                    <a href="./admin.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="">SALIR</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">SALIR</a>
                 </li>                
             </ul>
         </nav> 
     </header><!--Fin Header -->
-    <main><!--Inicio Main-->
-        <table>
-            <tr>
-                <th>LISTADO DE PRODUCTOS</th>
-                <th>AGREGAR</th>
-                <th>
-                    <input type="button">
-                </th>
-            </tr>
-            <tr>
-                <th>Id</th>
-                <th>Código</th>
-                <th>Nombre del Produto</th>
-                <th>Categoría</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th><input type="button"></th>
-                <th><input type="button"></th>
-            </tr>
-        </table>
-        <footer>
-            <section>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="../Shop/shop.html">SHOP</a>
-                        </li>
-                        <li>
-                            <a href="./signin.html">REGISTRARSE</a>
-                        </li>
-                        <li>
-                            <a href="../pages/contact.html">CONTACTO</a>
-                        </li>
-                        <li>
-                            <a href="login.html">LOGIN</a>
-                        </li>
-                    </ul>
-                    <picture>
-                        <img src="../img/branding/logo_light_horizontal.svg" alt="Isotipo de la marca FunkoShop">
-                    </picture>
-                </nav>
-            </section>
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>
-        </footer>
-    </main><!--Fin Main-->    
+    <main class="container"><!--Inicio Main-->
+        <div class="search">
+        <button class="search__button"><iconify-icon icon="material-symbols:search-rounded" style="color: #1f1f1f;"></iconify-icon></button>
+        <input class="search__input" type="search" placeholder="código, nombre o categoría">
+        </div>
+
+        <section class="grid-container container">
+            <p class="grid-header">LISTADO DE PRODUCTOS</p>
+            <article class="grid-add">
+                <p class="grid-text">AGREGAR</p>
+                <a href="./create.html"><button class="grid-button">+</button></a>
+            </article>
+            <p class="grid-title-1">ID</p>
+            <p class="grid-title-2">Código</p>
+            <p class="grid-title-3">Nombre del Producto</p>
+            <p class="grid-title-4">Categoría</p>
+            <p class="grid-title-5"></p>   
+            <article class="grid-item">
+                <p>1</p>
+            </article> 
+            <article class="grid-item">
+                <p>STW001002</p>                
+            </article> 
+            <article class="grid-item">
+                <p>Baby Yoda Blueball</p>                
+            </article> 
+            <article class="grid-item">
+                <p>STAR WARS</p>                
+            </article>      
+            <article class="grid-item-with-button">
+                <a href="./edit.html">
+                <button class="with-button-edit"><iconify-icon icon="material-symbols:edit-rounded" style="color: #1d84b5;"></iconify-icon></button>
+                </a>
+                <button class="with-button-delete"><iconify-icon icon="material-symbols:delete-rounded" style="color: #f33;"></iconify-icon></button>
+            </article>
+    </section>
+    </main><!--Fin Main--> 
+
+    <footer class="footer">
+        <section>
+            <nav class="navbar container">
+                <ul class="item">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../Shop/shop.html">SHOP</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./signin.html">REGISTRARSE</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../../pages/contact.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./login.html">LOGIN</a>
+                    </li>
+                </ul>
+                <picture>
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isotipo de la marca FunkoShop">
+                </picture>
+            </nav>
+        </section>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>  
 </body>
 </html>

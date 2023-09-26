@@ -4,84 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create | FunkoShop</title>
+    <link rel="stylesheet" href="../../css/create.css"
 </head>
 <body>
     <header> <!--Inicio Header -->
-        <nav>        
-            <picture>
+        <nav class="navbar container">        
+            <picture class="navbar__logo">
                 <a href="../../index.html">
                  <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo Funkoshop">
                 </a>
             </picture>
         
-            <ul>
-                <li>
-                    <a href="../Shop/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li navbar__item>
+                    <a class="navbar__link" href="../Shop/shop.html">VER TIENDA</a>
                 </li>
-                <li>
-                    <a href="./admin.html">ADMIN</a>
+                <li navbar__item>
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="">SALIR</a>
+                <li navbar__item>
+                    <a class="navbar__link" href="">SALIR</a>
                 </li>                
             </ul>
         </nav> 
     </header><!--Fin Header -->
-    <main>
-        <form action="./admin.html">
-            <h2>CREAR NUEVO ITEM</h2>
-            <label for="categoria">Categoría:</label>
-            <select name="categoria" id="">
+    <main class="container">
+        <form class="create" action="./admin.html">
+            <h2 class="create__title">CREAR NUEVO ITEM</h2>
+            <div class="create__select">
+                <div class="create__select-category">
+                    <label class="create__label" for="categoria">Categoría:</label>
+                    <select class="create__select-input" name="categoria" id="categoria">
+                        <option value="0">Seleccionar</option>
+                    </select>
+                </div>
+                <div class="create__select-license">
+                    <label class="create__label" for="licencia">Licencia:</label>
+                    <select class="create__select-input" name="licencia" id="licencia">
+                        <option value="0">Seleccionar</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="create__name">
+                <label class="label__name" for="nombreproducto">Nombre del Producto:</label>
+                <input class="input__name" type="text" name="nombreproducto" id="nombreproducto">
+            </div>
 
-            </select>
-            <label for="licencia">Licencia:</label>
-            <select name="licencia" id="">
+            <textarea class="create__textarea" name="descripcion" id="" cols="30" rows="10">Descripción del producto</textarea>
+            
+            <div class="create__product">
+                <div class="product__sku">
+                    <label class="product__label" for="sku">SKU:</label>
+                    <input class="input__sku" type="number" name="sku" id="sku">
+                </div>
+                <div class="product__price">
+                    <label class="product__label" for="precio">Precio:</label>
+                    <input class="input__price" type="number" name="precio" id="precio">
+                </div>
+                <div class="product__stock">
+                    <label class="product__label" for="stock">Stock:</label>
+                    <input class="input__stock" type="number" name="stock" id="stock">
+                </div>
+            </div>
 
-            </select>
-            <label for="nombreproducto">Nombre del Producto:</label>
-            <input type="text" name="nombreproducto">
-            <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
-            <label for="sku">SKU:</label>
-            <input type="number" name=sku">
-            <label for="precio">Precio:</label>
-            <input type="number" name="precio">
-            <label for="stock">Stock:</label>
-            <input type="number" name="stock">
-            <label for="descuento">Descuento:</label>
-            <input type="number" name="descuento">
-            <label for="cuotas">Cuotas:</label>
-            <select name="cuotas" id="">
+            <div class="create__promo">
+                <div class="promo__off">
+                    <label class="product__label" for="descuento">Descuento:</label>
+                    <input class="input__off" type="number" name="descuento" id="descuento">
+                </div>
+                <div class="promo__fee">
+                    <label class="product__label" for="cuotas">Cuotas:</label>
+                    <select class="input__fee" name="cuotas" id="cuotas">
+            
+                    </select>
+                </div>
+            </div>
 
-            </select>
-            <label for="imagenes">Imágenes:</label>
-            <input type="file" name="imagenes">
-            <input type="submit" name="agregar" value="Agregar Producto">
-            <input type="reset" name="limpiar" value="Limpiar">
+            <div class="create__files">
+                <label class="product__label for="imagenes">Imágenes:</label>
+                <input class="input__files" type="file" name="imagenes" id="imagenes">
+            </div>
+
+            <div class="create__buttons">
+            <input class="button__add" type="submit" name="agregar" value="Agregar Producto">
+            <input class="button__reset" type="reset" name="limpiar" value="Limpiar">
+            </div>
         </form>
-        <footer>
-            <section>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="../Shop/shop.html">SHOP</a>
-                        </li>
-                        <li>
-                            <a href="./signin.html">REGISTRARSE</a>
-                        </li>
-                        <li>
-                            <a href="../pages/contact.html">CONTACTO</a>
-                        </li>
-                        <li>
-                            <a href="./login.html">LOGIN</a>
-                        </li>
-                    </ul>
-                    <picture>
-                        <img src="../../img/branding/logo_light_horizontal.svg" alt="Isotipo de la marca FunkoShop">
-                    </picture>
-                </nav>
-            </section>
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>
-        </footer>
     </main>
+    <footer class="footer">
+        <section>
+            <nav class="navbar container">
+                <ul class="item">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../Shop/shop.html">SHOP</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./signin.html">REGISTRARSE</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../../pages/contact.html">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./login.html">LOGIN</a>
+                    </li>
+                </ul>
+                <picture>
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isotipo de la marca FunkoShop">
+                </picture>
+            </nav>
+        </section>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
 </body>
 </html>

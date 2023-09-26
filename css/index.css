@@ -586,7 +586,7 @@ aside{
 /*CART*/
 
 .cart-title{
-    width: 506px;
+    width: 510px;
     height: 62px;
     top: 272px;
     left: 110px;
@@ -815,7 +815,7 @@ aside{
     width: 800px;
     height: 68px;
     margin-top: 50px;
-    margin-left: 400px;
+    margin-left: 405px;
     font-size: var(--font-xlarge);
     line-height: 38.73px;
     font-weight: 700;

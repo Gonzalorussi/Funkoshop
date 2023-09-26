@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&family=Raleway:wght@100;300;400;500;600;700;900&display=swap');
+
+:root{
+    /*palette*/
+    --primary-solid: #FF3333;
+    --primary-900: rgb(255, 51, 51, 0.9);
+    --primary-500:rgb(255, 51, 51, 0.5);
+    --primary-300: rgb(255, 51, 51, 0.3);
+
+    --secondary-solid:#1d84b5;
+    --secondary-900:rgb(29, 132, 181,0.9);
+    --secondary-500:rgb(29, 132, 181,0.5);
+    --secondary-300:rgb(29, 132, 181,0.3);
+
+    --dark-solid: #1F1F1F;
+    --dark-900:rgb(31, 31, 31,0.9);
+    --dark-700:rgb(31, 31, 31, 0.7);
+    --dark-500:rgb(31, 31, 31,0.5);
+    --dark-300:rgb(31, 31, 31,0.3);
+
+    --dark-bg-solid:#30343F;
+    --light-bg-solid: #FAFAFF;
+    --light-font-solid: #FFFFFF;
+
+    /*TYPOGRAPHY*/
+
+    --base-font:'inter', sans-serif;
+    --alternative-font:'Raleway', sans-serif;
+
+    /*FONT SIZES*/
+
+    --font-display:4.6em;
+    --font-jumbo:3.8em;
+    --font-xlarge:3em;
+    --font-large:2.4em;
+    --font-medium:1.8em;
+    --font-small:1.6em;
+    --font-xsmall:1.4em;
+
+    /*SPACING*/
+    --spacing-128:12.8rem;
+    --spacing-68:6.8rem;
+    --spacing-36:3.6rem;
+    --spacing-28:2.8rem;
+    --spacing-24:2.4rem;
+    --spacing-20:2rem;
+    --spacing-16:1.6rem;
+    --spacing-12:1.2rem;
+    --spacing-8:0.8rem;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    color: var(--dark-solid);
+
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+header,
+footer {
+    font-family: var(--alterative-font);
+    color:var(--light-bg-solid);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1,8em;
+    color:inherit;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--dark-bg-solid);
+    gap:var(--spacing-36)
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__logo{
+    max-width: 300px;
+
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover{
+    background-color: var(--primary-900);
+}
+
+/*FORM*/
+.create{
+    width: 700px;
+    height: 669.3px;    
+}
+
+.create__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    line-height: 49.31px;
+    width: 431px;
+    height: 49px;
+}
+
+.create__select{
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+    margin-top: var(--spacing-36);
+}
+
+.create__select-category{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-20);
+    align-items: center;
+}
+
+.create__select-license{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-20);
+    align-items: center;
+}
+
+.create__label{
+    font-size: var(--font-large);
+    font-weight: 300;
+    line-height: 29.05px;
+    width: 125px;
+}
+
+.create__select-input{
+    width: 243px;
+    height: 24px;    
+}
+
+.create__name{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-16);
+    margin-top: 36px;
+    
+}
+.label__name{
+    font-size: var(--font-large);
+    font-weight: 400;
+    line-height: 29.05px;   
+}
+
+.input__name{
+    width: 296px;
+    height: 27.36px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid var(--primary-solid);
+    font-size: var(--font-medium);
+    font-weight: 400;
+    line-height: 21.78px;
+}
+
+.create__textarea{
+    width: 827px;
+    height: 195px;
+    border-radius: 4px;
+    border: 1px;
+    color: var(--dark-solid);
+    margin-top: var(--spacing-36);
+    font-weight: 400;
+    font-size: var(--font-medium);
+    line-height: 21.78px;
+}
+
+.create__product{
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+}
+
+.product__sku{
+    display: flex;
+    align-items: center;
+}
+
+.product__price{
+    display: flex;
+    align-items: center;
+}
+
+.product__stock{
+    display: flex;
+    align-items: center;
+}
+
+.product__label{
+    font-size: var(--font-large);
+    font-weight: 400;
+    line-height: 29.05px;
+}
+
+.input__sku{
+    width: 130px;
+    height: 27px;
+    border-bottom: 2px solid var(--primary-solid);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.input__price{
+    width: 130px;
+    height: 27px;
+    border-bottom: 2px solid var(--primary-solid);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.input__stock{
+    width: 55px;
+    height: 27px;
+    border-bottom: 2px solid var(--primary-solid);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.create__promo{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-24);
+    margin-top: 50px;
+    align-items: center;
+}
+
+.promo__off{
+    display: flex;
+    align-items: center;
+}
+
+.promo__fee{
+    display: flex;
+    align-items: center;
+}
+
+.input__off{
+    width: 55px;
+    height: 27px;
+    border-bottom: 2px solid var(--primary-solid);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.input__fee{
+    width: 346px;
+    height: 24px;
+    font-size: var(--font-medium);
+    font-weight: 400;
+    line-height: 24.2px;
+}
+
+.create__files{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 45px;
+    gap: var(--spacing-8);
+}
+
+.input__files{
+    width: 275px;
+    height: 25px;
+    border: 1px;
+}
+
+/*BUTTONS*/
+
+.create__buttons{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-36);
+}
+
+.button__modify{
+    width: 175px;
+    height: 44px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    font-size: var(--font-small);
+    font-weight: 600;
+    line-height: 16.94px;
+    border: none;
+    margin-top: var(--spacing-20);
+}
+
+.button__modify:hover{
+    cursor: pointer;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.footer__copy{
+    font-size: var(--font-small);
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
