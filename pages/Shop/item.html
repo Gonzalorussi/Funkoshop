@@ -59,12 +59,12 @@
                     <p class="product__price">$ 1799,99</p>
                     </div>
                     <form id="cartform" action="">
-                        <input type="number" id="countitem">
+                        <input class= "item__input" type="text" name="countitem" id="countitem" placeholder="0">
                         <div class="countmodifier">
-                        <button class="countmodifier__plus">+</button>
-                        <button class="countmodifier__minus">-</button>
+                        <button id="add" class="countmodifier__plus" type="button">+</button>
+                        <button id="subtract" class="countmodifier__minus" type="button">-</button>
                         </div>
-                        <input type="submit" name="agregar" value="Agregar al carrito" id="agregar">
+                        <input type="submit" name="agregar" value="Agregar al carrito" id="agregar" type="submit">
                     </form> 
                     <div class="product-link">
                         <a class="product__link" href=""> 
@@ -156,5 +156,6 @@
             </footer>
     </main>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script src="../../js/item.js"></script>
 </body>
 </html>
